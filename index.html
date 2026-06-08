@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snake Game JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="game-details">
+
+        <div class="brand">
+          <div class="title">🐍 Snake Pro</div>
+          <div class="sub">Level: <span class="level-label">Easy</span></div>
+        </div>
+        <div class="stats">
+          <div class="stat score">Score: 0</div>
+          <div class="stat high-score">High Score: 0</div>
+        </div>
+      </header>
+
+      <div class="top-controls">
+        <div class="difficulty">
+          <button type="button" class="diff-btn active" data-level="easy">Easy</button>
+          <button type="button" class="diff-btn" data-level="medium">Medium</button>
+          <button type="button" class="diff-btn" data-level="hard">Hard</button>
+        </div>
+        <div class="actions">
+          <button type="button" class="action-btn" id="pauseBtn" aria-label="Pause">⏸ Pause</button>
+        </div>
+
+      </div>
+
+      <main class="board-area">
+        <div class="play-board" aria-label="Snake game board"></div>
+
+        <div class="overlay start" id="startOverlay">
+          <div class="overlay-card">
+            <h2 class="overlay-title">🐍 Snake Pro</h2>
+            <div class="overlay-controls">
+              <button type="button" class="primary-btn" id="startBtn">▶ Start Game</button>
+              <div class="hint">Arrow Keys / WASD / Swipe</div>
+            </div>
+            <div class="overlay-footer">
+              <div>🏆 High Score: <span class="high-score">0</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overlay gameover" id="gameOverOverlay" style="display:none;">
+          <div class="overlay-card">
+            <h2 class="overlay-title">Game Over</h2>
+            <div class="overlay-stats">
+              <div>Score: <span class="final-score">0</span></div>
+              <div>High Score: <span class="final-high-score">0</span></div>
+            </div>
+            <div class="overlay-controls">
+              <button type="button" class="primary-btn" id="restartBtn">🔄 Play Again</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="controls">
+        <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+        <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+        <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+        <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+      </div>
+    </div>
+
+
+  </body>
+</html>
